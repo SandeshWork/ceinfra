@@ -1,11 +1,10 @@
 import image_b2b68b978befbc1f68c481ea5a6efcb6b47be227 from '../../assets/b2b68b978befbc1f68c481ea5a6efcb6b47be227.png'
-import image_84efd6552a90e18f199968daa2d7497d810bf2de from '../../assets/84efd6552a90e18f199968daa2d7497d810bf2de.png'
 import image_1a6279a726b7fa8ca737334e5adcae69e424d060 from '../../assets/1a6279a726b7fa8ca737334e5adcae69e424d060.png'
 import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X, Phone, Download, ChevronDown } from "lucide-react";
 import { MessageSquare } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "../../assets/82d3576aea8b83e04d59451c19d83c744d157ea4.png";
+import logo from "../../assets/ce-logo.png";
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
