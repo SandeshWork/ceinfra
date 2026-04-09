@@ -5,6 +5,7 @@ import { Menu, X, Phone, Download, ChevronDown } from "lucide-react";
 import { MessageSquare } from "lucide-react";
 import { useState, useEffect } from "react";
 import logo from "../../assets/ce-logo.png";
+import footerLogo from "../../assets/footer-logo.png";
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,7 +110,7 @@ export default function Layout() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-black p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -185,7 +186,7 @@ export default function Layout() {
             {/* Company Info */}
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img src={logo} alt="CE Infrastructure LLP" className="w-12 h-12 object-contain" />
+                <img src={footerLogo} alt="CE Infrastructure LLP" className="w-12 h-12 object-contain" />
                 <div>
                   <div className="font-bold text-lg">CE Infrastructure LLP</div>
                   <div className="text-xs text-[#ffffff]">by Crescent Enterprises</div>

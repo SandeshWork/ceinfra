@@ -19,12 +19,56 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const GOOGLE_SHEET_WEBAPP_URL =
+    "https://script.google.com/macros/s/AKfycbzhqSq8wXEDKooOSWFpfkVX217AHeHmt3nvjhsB0PHIvC8NPwJ65-YdR38lap23sZAhbg/exec";
+
+  const getSelectedServices = () => {
+    return formData.service ? [formData.service] : [];
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert(
-      "Thank you for your inquiry! We'll get back to you within 24 hours.",
-    );
+
+    const payload = {
+      full_name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      service_required: getSelectedServices(),
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(GOOGLE_SHEET_WEBAPP_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Submission failed with status ${response.status}`);
+      }
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
+      });
+
+      alert(
+        "Thank you for your inquiry! We'll get back to you within 24 hours.",
+      );
+    } catch (error) {
+      console.error("Lead submission error:", error);
+      alert(
+        "There was a problem submitting the form. Please try again or contact us directly.",
+      );
+    }
   };
 
   const handleChange = (

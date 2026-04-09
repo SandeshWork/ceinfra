@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Shield, Clock, Award, Users, TrendingUp, CheckCircle, Zap, Wrench } from "lucide-react";
+import { Link } from "react-router";
 
 export default function WhyCrescent() {
   return (
@@ -306,9 +307,11 @@ export default function WhyCrescent() {
             <p className="text-xl mb-8 max-w-2xl mx-auto text-[#1a2639]">
               Join industry leaders who trust us for their elevation needs
             </p>
-            <button className="bg-[#FF6A00] px-8 py-4 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all shadow-lg text-[#ffffff]">
-              Get Started Today
-            </button>
+            <Link to="/contact">
+              <button className="bg-[#FF6A00] px-8 py-4 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all shadow-lg text-[#ffffff]">
+                Get Started Today
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>

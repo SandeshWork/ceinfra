@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import boomPumpImage from "../../assets/boom-pump.png";
+import scissorLiftImage from "../../assets/scissor-lift.png";
 
 const machineryCategories = [
   {
@@ -34,8 +36,7 @@ const machineryCategories = [
     description:
       "Stable vertical lifting platforms ideal for indoor and outdoor maintenance work",
     icon: Wrench,
-    image:
-      "https://images.pexels.com/photos/15734987/pexels-photo-15734987.jpeg?_gl=1*w9pkuz*_ga*Mjc4OTAwNDY1LjE3NjU3NTEyMTQ.*_ga_8JE65Q40S6*czE3NzU0MTM1NzgkbzUkZzEkdDE3NzU0MTM1OTIkajQ2JGwwJGgw",
+    image: scissorLiftImage,
     specs: [
       "Platform heights from 6m to 18m capacity",
       "Electric & diesel options",
@@ -84,8 +85,7 @@ const machineryCategories = [
     description:
       "Powerful concrete pumping systems for high-rise and infrastructure projects",
     icon: Shield,
-    image:
-      "https://www.justdial.com/jdmart/Bangalore/Concrete-Boom-Pump-with-90-cumhr-capacity-ElectricDieselHydraulic-power-source-150-kW-engine-power/pid-2011435760/080P5913291",
+    image: boomPumpImage,
     specs: [
       "28m to 61m vertical reach",
       "High output capacity",
