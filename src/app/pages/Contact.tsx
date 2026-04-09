@@ -39,6 +39,9 @@ export default function Contact() {
     };
 
     try {
+      console.log("Sending payload:", payload);
+      console.log("To URL:", GOOGLE_SHEET_WEBAPP_URL);
+
       const response = await fetch(GOOGLE_SHEET_WEBAPP_URL, {
         method: "POST",
         headers: {
@@ -47,8 +50,16 @@ export default function Contact() {
         body: JSON.stringify(payload),
       });
 
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+
+      const responseText = await response.text();
+      console.log("Response text:", responseText);
+
       if (!response.ok) {
-        throw new Error(`Submission failed with status ${response.status}`);
+        throw new Error(
+          `Server error: ${response.status} - ${responseText || response.statusText}`
+        );
       }
 
       setFormData({
@@ -64,10 +75,14 @@ export default function Contact() {
         "Thank you for your inquiry! We'll get back to you within 24 hours.",
       );
     } catch (error) {
-      console.error("Lead submission error:", error);
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      console.error("Lead submission error:", errorMessage);
       alert(
-        "There was a problem submitting the form. Please try again or contact us directly.",
+        `Error submitting form: ${errorMessage}\n\nPlease check the browser console for more details.`
       );
+    }
+  };
     }
   };
 
