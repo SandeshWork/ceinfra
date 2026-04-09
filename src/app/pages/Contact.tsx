@@ -20,7 +20,7 @@ export default function Contact() {
   });
 
   const GOOGLE_SHEET_WEBAPP_URL =
-    "https://script.google.com/macros/s/AKfycbypgMQRxFNA1rPyQjVaiKkSIpOGNIoCncW4Dto5IbKDn4ocpvMU0xElz-gxLXSNameoaA/exec";
+    "https://script.google.com/macros/s/AKfycbzYpD5wrgzdhzUb7ER6E4FwNYqgb6UKHd_MgWD0ZmsB-Or7VhbD8WRDOWkxFEeyzeGJOA/exec";
 
   const getSelectedServices = () => {
     return formData.service ? [formData.service] : [];
