@@ -83,8 +83,6 @@ export default function Contact() {
       );
     }
   };
-    }
-  };
 
   const handleChange = (
     e: React.ChangeEvent<
