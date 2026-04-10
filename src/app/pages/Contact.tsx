@@ -44,23 +44,11 @@ export default function Contact() {
 
       const response = await fetch(GOOGLE_SHEET_WEBAPP_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        mode: "no-cors",
         body: JSON.stringify(payload),
       });
 
       console.log("Response status:", response.status);
-      console.log("Response ok:", response.ok);
-
-      const responseText = await response.text();
-      console.log("Response text:", responseText);
-
-      if (!response.ok) {
-        throw new Error(
-          `Server error: ${response.status} - ${responseText || response.statusText}`
-        );
-      }
 
       setFormData({
         name: "",
