@@ -18,6 +18,7 @@ export default function Contact() {
     service: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const GOOGLE_SHEET_WEBAPP_URL =
     "https://script.google.com/macros/s/AKfycbx9D91i_ADkThBAeHLd42sHgmJkz3HP_Kp8FJquERlZlZi3blphyj4qmplAT1mPiIvwEw/exec";
@@ -28,6 +29,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const payload = {
       full_name: formData.name,
@@ -69,6 +71,8 @@ export default function Contact() {
       alert(
         `Error submitting form: ${errorMessage}\n\nPlease check the browser console for more details.`
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -318,10 +322,30 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#1A2639] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all flex items-center justify-center gap-2"
+                  disabled={isLoading}
+                  className="w-full bg-[#1A2639] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send size={20} />
-                  Send Message
+                  {isLoading ? (
+                    <>
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className="w-5 h-5"
+                      >
+                        <Send size={20} />
+                      </motion.div>
+                      <span>Submitting...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={20} />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </motion.div>
