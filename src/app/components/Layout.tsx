@@ -1,7 +1,7 @@
 import image_b2b68b978befbc1f68c481ea5a6efcb6b47be227 from '../../assets/b2b68b978befbc1f68c481ea5a6efcb6b47be227.png'
 import image_1a6279a726b7fa8ca737334e5adcae69e424d060 from '../../assets/1a6279a726b7fa8ca737334e5adcae69e424d060.png'
 import { Outlet, Link, useLocation } from "react-router";
-import { Menu, X, Phone, Download, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Download, ChevronDown, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
 import { MessageSquare } from "lucide-react";
 import { useState, useEffect } from "react";
 import logo from "../../assets/ce-logo.png";
@@ -192,9 +192,44 @@ export default function Layout() {
                   <div className="text-xs text-[#ffffff]">by Crescent Enterprises</div>
                 </div>
               </div>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-sm mb-6">
                 Safety-first infrastructure partner across industries. Building foundations, erecting structures, delivering excellence.
               </p>
+              {/* Social Media Icons */}
+              <div className="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/in/media-crescent-b17281402/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors"
+                  title="LinkedIn"
+                >
+                  <Linkedin size={20} className="text-white" />
+                </a>
+                <a
+                  href="https://www.instagram.com/ceinfrastructure/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors"
+                  title="Instagram"
+                >
+                  <Instagram size={20} className="text-white" />
+                </a>
+                <button
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors cursor-not-allowed opacity-50"
+                  title="Facebook"
+                  disabled
+                >
+                  <Facebook size={20} className="text-white" />
+                </button>
+                <button
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors cursor-not-allowed opacity-50"
+                  title="YouTube"
+                  disabled
+                >
+                  <Youtube size={20} className="text-white" />
+                </button>
+              </div>
             </div>
 
             {/* Quick Links */}
