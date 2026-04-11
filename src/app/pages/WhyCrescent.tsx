@@ -17,11 +17,19 @@ export default function WhyCrescent() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-block bg-[#FF6A00] text-[#1A2639] px-6 py-2 rounded-full font-bold mb-6 text-lg"
+            >
+              🇮🇳 Pan India Operations
+            </motion.div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Why Choose <span className="text-[#ffffff]">CE Infrastructure</span>
+              Why Choose <span className="text-[#FF6A00]">CE Infrastructure</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The CE Infrastructure difference: Safety, reliability, and excellence in every project
+              Safety, reliability, and excellence across India – Your trusted infrastructure partner
             </p>
           </motion.div>
         </div>

@@ -90,7 +90,7 @@ export default function Industries() {
       {/* Industries Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-12">
             {industries.map((industry, index) => (
               <motion.div
                 key={industry.title}
@@ -98,39 +98,41 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: (index % 2) * 0.1 }}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all bg-white border-2 border-transparent hover:border-[#FF6A00]"
+                className={`group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all bg-white border-2 border-transparent hover:border-[#FF6A00] ${
+                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:items-stretch">
-                  {/* Image */}
-                  <div className="relative h-64 lg:h-auto lg:min-h-full overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Container */}
+                  <div className="relative aspect-video lg:aspect-auto lg:h-96 overflow-hidden bg-gray-100 order-2 lg:order-none">
                     <ImageWithFallback
                       src={industry.image}
                       alt={industry.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1A2639]/80 to-transparent" />
-                    <div className="absolute top-6 left-6">
-                      <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#ffffff]">
-                        <industry.icon className="text-[#1A2639]" size={32} />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1A2639]/60 to-transparent" />
+                    <div className={`absolute top-8 flex ${index % 2 === 1 ? 'right-8' : 'left-8'}`}>
+                      <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[#FF6A00] shadow-lg">
+                        <industry.icon className="text-white" size={40} />
                       </div>
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-8 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-[#1A2639] mb-3">
+                  {/* Content Container */}
+                  <div className="p-8 lg:p-12 flex flex-col justify-center bg-white">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#1A2639] mb-4">
                       {industry.title}
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                       {industry.description}
                     </p>
-                    <div className="space-y-2">
-                      <div className="text-sm font-semibold text-[#1A2639] mb-2">Key Applications:</div>
-                      <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="text-sm font-bold text-[#1A2639] mb-4 uppercase tracking-wider">Key Applications</div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {industry.applications.map((app) => (
-                          <div key={app} className="flex items-center gap-2 text-sm text-gray-600">
-                            <div className="w-1.5 h-1.5 bg-[#FF6A00] rounded-full" />
-                            {app}
+                          <div key={app} className="flex items-start gap-3">
+                            <div className="w-2.5 h-2.5 bg-[#FF6A00] rounded-full mt-1.5 flex-shrink-0" />
+                            <span className="text-gray-700">{app}</span>
                           </div>
                         ))}
                       </div>

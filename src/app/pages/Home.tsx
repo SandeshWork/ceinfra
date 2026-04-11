@@ -9,6 +9,8 @@ import {
   CheckCircle,
   TrendingUp,
   Award,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useState, useEffect } from "react";
@@ -32,6 +34,33 @@ const clientLogos = [
   { name: "Shapoorji Pallonji", logo: shapoorjiLogo },
   { name: "Larsen & Toubro", logo: larsenToubroLogo },
   { name: "Vedanta", logo: vedantaLogo },
+];
+
+const heroCarouselImages = [
+  {
+    url: "https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Aerial lift equipment at construction site"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1752980628969-62c587373c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHJhaWwlMjBjb25zdHJ1Y3Rpb24lMjBicmlkZ2V8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Metro rail and bridge construction"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1762530358132-94b652b2e514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY3JhbmUlMjBwaWVyJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MjQ3Mzc4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Industrial crane and pier construction"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1771793307225-f92a984b3d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib29tJTIwbGlmdCUyMGFlcmlhbCUyMHBsYXRmb3JtJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3NTQwOTMwMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Boom lift aerial platform construction"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Industrial manufacturing plant"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1768128834332-7d3479c8d634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjByZWZpbmVyeSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzI0NzM3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    alt: "Oil refinery equipment and infrastructure"
+  }
 ];
 
 function Counter({
@@ -75,36 +104,81 @@ function Counter({
 }
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroCarouselImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? heroCarouselImages.length - 1 : prev - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % heroCarouselImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#232323]/95 to-[#232323]/80 z-10" />
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Aerial lift equipment at construction site"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {/* Carousel Background Images */}
+        <div className="absolute inset-0">
+          {heroCarouselImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0"
+            >
+              <ImageWithFallback
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Multiple Layer Dark Gradient for Text Visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/70 via-[#1A2639]/65 to-[#000000]/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1A2639]/30 to-[#000000]/50 z-10" />
+
+        {/* Carousel Content */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <motion.h1
+            key={currentImageIndex}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg"
           >
             Pan India{" "}
             <span className="text-[#FF6A00]">Infrastructure Solutions</span>
           </motion.h1>
           <motion.p
+            key={`desc-${currentImageIndex}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md"
           >
             Infrastructure Excellence by CE Infrastructure LLP
           </motion.p>
           <motion.div
+            key={`buttons-${currentImageIndex}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -112,12 +186,12 @@ export default function Home() {
           >
             <Link
               to="/contact"
-              className="bg-[#FF6A00] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all inline-flex items-center justify-center gap-2"
+              className="bg-[#FF6A00] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
             >
               Get a Quote <ArrowRight size={20} />
             </Link>
             <button
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all border-2 border-white/50 shadow-lg hover:shadow-xl"
               onClick={() =>
                 window.open(
                   "https://drive.google.com/uc?export=download&id=1D7jNDX86QyTTe7QmKlbjGGt6gQLNwGZb",
@@ -130,12 +204,51 @@ export default function Home() {
           </motion.div>
         </div>
 
+        {/* Carousel Controls */}
+        <div className="absolute bottom-8 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8">
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            className="bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm border border-white/30 transition-all shadow-lg hover:shadow-xl"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="flex gap-2 items-center">
+            {heroCarouselImages.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => goToSlide(index)}
+                animate={{
+                  width: index === currentImageIndex ? 24 : 8,
+                  backgroundColor:
+                    index === currentImageIndex ? "#FF6A00" : "rgba(255, 255, 255, 0.5)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="h-2 rounded-full backdrop-blur-sm border border-white/30 cursor-pointer hover:bg-white/70"
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            className="bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm border border-white/30 transition-all shadow-lg hover:shadow-xl"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
+          className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20"
         >
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
             <motion.div

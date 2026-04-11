@@ -108,84 +108,6 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Culture Values */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-[#1A2639] mb-16"
-          >
-            Why Work With{" "}
-            <span className="text-[#FF6A00]">Us</span>
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Collaborative Culture",
-                description:
-                  "Work with passionate professionals in a supportive team environment",
-              },
-              {
-                icon: TrendingUp,
-                title: "Growth Opportunities",
-                description:
-                  "Clear career progression paths and continuous learning programs",
-              },
-              {
-                icon: Award,
-                title: "Industry Leadership",
-                description:
-                  "Be part of India's leading elevation and infrastructure solutions provider",
-              },
-              {
-                icon: Heart,
-                title: "Work-Life Balance",
-                description:
-                  "Competitive benefits with focus on employee well-being",
-              },
-              {
-                icon: GraduationCap,
-                title: "Training & Development",
-                description:
-                  "Regular skill enhancement and certification programs",
-              },
-              {
-                icon: Briefcase,
-                title: "Challenging Projects",
-                description:
-                  "Work on prestigious projects with India's top industrial companies",
-              },
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 p-8 rounded-xl border-2 border-transparent hover:border-[#FF6A00] transition-all"
-              >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-[#d3d3d3]">
-                  <value.icon
-                    className="text-[#1A2639]"
-                    size={32}
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-[#1A2639] mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Open Positions */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,6 +181,84 @@ export default function Careers() {
                 >
                   Apply Now
                 </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With Us */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-[#1A2639] mb-16"
+          >
+            Why Work With{" "}
+            <span className="text-[#FF6A00]">Us</span>
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Users,
+                title: "Collaborative Culture",
+                description:
+                  "Work with passionate professionals in a supportive team environment",
+              },
+              {
+                icon: TrendingUp,
+                title: "Growth Opportunities",
+                description:
+                  "Clear career progression paths and continuous learning programs",
+              },
+              {
+                icon: Award,
+                title: "Industry Leadership",
+                description:
+                  "Be part of India's leading elevation and infrastructure solutions provider",
+              },
+              {
+                icon: Heart,
+                title: "Work-Life Balance",
+                description:
+                  "Competitive benefits with focus on employee well-being",
+              },
+              {
+                icon: GraduationCap,
+                title: "Training & Development",
+                description:
+                  "Regular skill enhancement and certification programs",
+              },
+              {
+                icon: Briefcase,
+                title: "Challenging Projects",
+                description:
+                  "Work on prestigious projects with India's top industrial companies",
+              },
+            ].map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gray-50 p-8 rounded-xl border-2 border-transparent hover:border-[#FF6A00] transition-all"
+              >
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-[#d3d3d3]">
+                  <value.icon
+                    className="text-[#1A2639]"
+                    size={32}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-[#1A2639] mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
