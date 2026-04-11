@@ -18,10 +18,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Our <span className="text-[#FF6A00]">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive equipment and services for your infrastructure needs
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ export default function Services() {
               className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all"
             >
               <Link to="/machineries" className="block">
-                <div className="relative h-[500px]">
+                <div className="relative h-[300px] sm:h-[500px]">
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                     alt="Our machinery fleet"
@@ -48,16 +48,16 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A2639] via-[#1A2639]/70 to-[#1A2639]/30" />
                 </div>
-                <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
+                <div className="absolute inset-0 p-5 sm:p-10 flex flex-col justify-end text-white">
                   <div className="mb-6">
-                    <Truck className="text-[#FF6A00]" size={64} />
+                    <Truck className="text-[#FF6A00]" size={40} />
                   </div>
-                  <h2 className="text-4xl font-bold mb-4">Machineries</h2>
-                  <p className="text-lg text-gray-200 mb-6">
+                  <h2 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Machineries</h2>
+                  <p className="text-sm sm:text-lg text-gray-200 mb-4 sm:mb-6">
                     Explore our extensive fleet of over 150+ types of specialized machinery available across India.
                   </p>
-                  <div className="flex items-center gap-3 text-[#FF6A00] font-semibold text-lg group-hover:gap-5 transition-all">
-                    Explore Machineries <ArrowRight size={24} />
+                  <div className="flex items-center gap-2 sm:gap-3 text-[#FF6A00] font-semibold text-base sm:text-lg group-hover:gap-5 transition-all">
+                    Explore Machineries <ArrowRight size={20} />
                   </div>
                 </div>
               </Link>
@@ -72,7 +72,7 @@ export default function Services() {
               className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all"
             >
               <Link to="/projects" className="block">
-                <div className="relative h-[500px]">
+                <div className="relative h-[300px] sm:h-[500px]">
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1752980628969-62c587373c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHJhaWwlMjBjb25zdHJ1Y3Rpb24lMjBicmlkZ2V8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                     alt="Our projects"
@@ -80,16 +80,16 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A2639] via-[#1A2639]/70 to-[#1A2639]/30" />
                 </div>
-                <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
+                <div className="absolute inset-0 p-5 sm:p-10 flex flex-col justify-end text-white">
                   <div className="mb-6">
-                    <Building2 className="text-[#FF6A00]" size={64} />
+                    <Building2 className="text-[#FF6A00]" size={40} />
                   </div>
-                  <h2 className="text-4xl font-bold mb-4">Projects</h2>
-                  <p className="text-lg text-gray-200 mb-6">
+                  <h2 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Projects</h2>
+                  <p className="text-sm sm:text-lg text-gray-200 mb-4 sm:mb-6">
                     Discover our portfolio of successful projects across ship repair, pier girder erection, and piling foundation works.
                   </p>
-                  <div className="flex items-center gap-3 text-[#FF6A00] font-semibold text-lg group-hover:gap-5 transition-all">
-                    View Projects <ArrowRight size={24} />
+                  <div className="flex items-center gap-2 sm:gap-3 text-[#FF6A00] font-semibold text-base sm:text-lg group-hover:gap-5 transition-all">
+                    View Projects <ArrowRight size={20} />
                   </div>
                 </div>
               </Link>

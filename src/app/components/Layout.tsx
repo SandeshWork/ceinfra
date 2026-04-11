@@ -45,11 +45,11 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
-              <img src={logo} alt="CE Infrastructure LLP" className="w-18 h-18 object-contain rounded-[10px]" />
+            <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
+              <img src={logo} alt="CE Infrastructure LLP" className="w-12 h-12 sm:w-18 sm:h-18 object-contain rounded-[10px] flex-shrink-0" />
               <div>
-                <div className="text-#1a2639 font-bold text-xl text-[#1a2639]">CE Infrastructure LLP</div>
-                <div className="text-xs text-[#1A2639]">by Crescent Enterprises</div>
+                <div className="text-#1a2639 font-bold text-sm sm:text-xl text-[#1a2639] leading-tight">CE Infrastructure LLP</div>
+                <div className="text-[10px] sm:text-xs text-[#1A2639]">by Crescent Enterprises</div>
               </div>
             </Link>
 
@@ -182,7 +182,7 @@ export default function Layout() {
       {/* Footer */}
       <footer className="text-white pt-16 pb-8 bg-[#1a2639]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
             {/* Company Info */}
             <div>
               <div className="flex items-center space-x-3 mb-4">
@@ -294,7 +294,7 @@ export default function Layout() {
       </footer>
 
       {/* Floating Quick Actions */}
-      <div className="fixed right-6 bottom-6 flex flex-col gap-3 z-40">
+      <div className="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 flex flex-col gap-2 sm:gap-3 z-40">
         <a
           href="tel:+919152568545"
           className="bg-[#FF6A00] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform"

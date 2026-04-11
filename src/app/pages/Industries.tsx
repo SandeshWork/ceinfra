@@ -77,10 +77,10 @@ export default function Industries() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Industries We <span className="text-[#FF6A00]">Serve</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Delivering specialized elevation solutions across diverse sectors with proven expertise and safety excellence
             </p>
           </motion.div>
@@ -111,19 +111,19 @@ export default function Industries() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#1A2639]/60 to-transparent" />
-                    <div className={`absolute top-8 flex ${index % 2 === 1 ? 'right-8' : 'left-8'}`}>
-                      <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[#FF6A00] shadow-lg">
-                        <industry.icon className="text-white" size={40} />
+                    <div className={`absolute top-4 sm:top-8 flex ${index % 2 === 1 ? 'right-4 sm:right-8' : 'left-4 sm:left-8'}`}>
+                      <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-full flex items-center justify-center bg-[#FF6A00] shadow-lg">
+                        <industry.icon className="text-white" size={24} />
                       </div>
                     </div>
                   </div>
 
                   {/* Content Container */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center bg-white">
-                    <h3 className="text-3xl lg:text-4xl font-bold text-[#1A2639] mb-4">
+                  <div className="p-5 sm:p-8 lg:p-12 flex flex-col justify-center bg-white">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1A2639] mb-3 sm:mb-4">
                       {industry.title}
                     </h3>
-                    <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                    <p className="text-gray-700 text-base sm:text-lg mb-5 sm:mb-8 leading-relaxed">
                       {industry.description}
                     </p>
                     <div>
@@ -172,7 +172,7 @@ export default function Industries() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center bg-white p-8 rounded-xl shadow-lg"
               >
-                <div className="text-4xl md:text-5xl font-bold text-[#FF6A00] mb-2">
+                <div className="text-3xl md:text-5xl font-bold text-[#FF6A00] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-[#1A2639] font-semibold">{stat.label}</div>
@@ -222,7 +222,7 @@ export default function Industries() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -inset-4 bg-[#FF6A00] rounded-2xl transform rotate-3" />
+              <div className="absolute -inset-1 sm:-inset-4 bg-[#FF6A00] rounded-2xl transform rotate-3" />
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Industrial facility"

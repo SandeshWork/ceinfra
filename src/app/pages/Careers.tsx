@@ -94,13 +94,13 @@ export default function Careers() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Build Your Career at{" "}
               <span className="text-[#FF6A00]">
                 CE Infrastructure
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Join a team that's taking the industry to new
               heights – safely, efficiently, reliably
             </p>
@@ -278,7 +278,7 @@ export default function Careers() {
             <span className="text-[#FF6A00]">Benefits</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {[
               { icon: DollarSign, title: "Competitive Salary" },
               { icon: Shield, title: "Health Insurance" },
@@ -316,7 +316,7 @@ export default function Careers() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded-xl p-8 max-w-2xl w-full my-8"
+            className="bg-white rounded-xl p-4 sm:p-8 max-w-2xl w-full my-4 sm:my-8"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-bold text-[#1A2639] mb-2">

@@ -17,10 +17,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               About <span className="text-[#FF6A00]">CE Infrastructure LLP</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-semibold">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto font-semibold">
               Crescent Enterprises is a leading infrastructure solutions provider delivering high-performance machinery and services across India.
             </p>
           </motion.div>
@@ -76,7 +76,7 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-[#1A2639] text-white p-10 rounded-xl"
+              className="bg-[#1A2639] text-white p-6 sm:p-10 rounded-xl"
             >
               <Target className="text-[#FF6A00] mb-6" size={48} />
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
@@ -89,7 +89,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-[#FF6A00] text-[#1A2639] p-10 rounded-xl"
+              className="bg-[#FF6A00] text-[#1A2639] p-6 sm:p-10 rounded-xl"
             >
               <CheckCircle className="mb-6" size={48} />
               <h3 className="text-2xl font-bold mb-4 text-[#ffffff]">Our Mission</h3>
@@ -169,11 +169,11 @@ export default function About() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-[#FF6A00] to-[#FF8533] p-6 rounded-lg text-white text-center"
+                  className="bg-gradient-to-br from-[#FF6A00] to-[#FF8533] p-4 sm:p-6 rounded-lg text-white text-center"
                 >
-                  <div className="text-3xl mb-2">{stat.icon}</div>
-                  <div className="text-2xl font-bold mb-1">{stat.label}</div>
-                  <div className="text-sm opacity-90">{stat.value}</div>
+                  <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">{stat.icon}</div>
+                  <div className="text-xl sm:text-2xl font-bold mb-1">{stat.label}</div>
+                  <div className="text-xs sm:text-sm opacity-90">{stat.value}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -313,8 +313,8 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="text-6xl mb-6 text-[#ffffff]">"</div>
-            <p className="text-2xl md:text-3xl font-medium mb-8 text-[#ffffff]">
+            <div className="text-4xl sm:text-6xl mb-4 sm:mb-6 text-[#ffffff]">"</div>
+            <p className="text-lg sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-[#ffffff]">
               At CE Infrastructure LLP, we don't just provide equipment – we elevate possibilities. Every project is an opportunity to demonstrate our commitment to safety, reliability, and excellence.
             </p>
             <div className="text-[#1A2639]">

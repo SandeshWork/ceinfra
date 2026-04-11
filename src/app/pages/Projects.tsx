@@ -83,10 +83,10 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Our <span className="text-[#FF6A00]">Projects</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Specialized expertise in ship repair, infrastructure erection, and foundation works
             </p>
           </motion.div>
@@ -96,7 +96,7 @@ export default function Projects() {
       {/* Stats Overview */}
       <section className="py-16 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               { icon: CheckCircle, value: "500+", label: "Projects Completed" },
               { icon: Award, value: "100%", label: "Safety Record" },
@@ -112,7 +112,7 @@ export default function Projects() {
                 className="text-center"
               >
                 <stat.icon className="text-[#FF6A00] mx-auto mb-3" size={40} />
-                <div className="text-3xl md:text-4xl font-bold text-[#1A2639] mb-2">
+                <div className="text-2xl md:text-4xl font-bold text-[#1A2639] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
@@ -148,7 +148,7 @@ export default function Projects() {
               >
                 {/* Image Section */}
                 <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl">
+                  <div className="relative h-full min-h-[220px] sm:min-h-[400px] rounded-xl overflow-hidden shadow-2xl">
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
@@ -158,7 +158,7 @@ export default function Projects() {
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="flex items-center gap-3 bg-[#FF6A00] inline-flex px-4 py-3 rounded-lg">
                         <project.icon className="text-[#ffffff]" size={32} />
-                        <h3 className="text-2xl font-bold text-[#ffffff]">{project.title}</h3>
+                        <h3 className="text-base sm:text-2xl font-bold text-[#ffffff]">{project.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -185,10 +185,10 @@ export default function Projects() {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                       {project.stats.map((stat, idx) => (
                         <div key={idx} className="bg-[#1A2639] text-white p-4 rounded-lg text-center">
-                          <div className="text-2xl font-bold text-[#FF6A00] mb-1">{stat.value}</div>
+                          <div className="text-lg sm:text-2xl font-bold text-[#FF6A00] mb-1">{stat.value}</div>
                           <div className="text-xs text-gray-300">{stat.label}</div>
                         </div>
                       ))}

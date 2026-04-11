@@ -104,11 +104,11 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Get in{" "}
               <span className="text-[#FF6A00]">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to elevate your project? Contact us today
               for a customized quote
             </p>
@@ -154,7 +154,7 @@ export default function Contact() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all border-2 border-transparent hover:border-[#FF6A00]"
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#d3d3d3]">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#d3d3d3]">
                   <contact.icon
                     className="text-[#1A2639]"
                     size={28}
@@ -180,7 +180,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border border-gray-100"
+              className="bg-gradient-to-br from-white to-gray-50 p-4 sm:p-8 rounded-2xl shadow-xl border border-gray-100"
             >
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-[#1A2639] mb-2">
@@ -215,7 +215,7 @@ export default function Contact() {
                 </motion.div>
 
                 {/* Email and Phone Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Email */}
                   <motion.div
                     whileFocus={{ scale: 1.01 }}
@@ -534,7 +534,7 @@ export default function Contact() {
           width: "100%",
           maxWidth: "1080px",
           height: "0",
-          paddingBottom: "37.04%", // 400/1080 * 100 = aspect ratio
+          paddingBottom: "56.25%", // 16:9 for mobile; overridden below for wider screens
           position: "relative",
           borderRadius: "12px",
           boxShadow: "0 2px 12px rgba(0,0,0,0.15)",

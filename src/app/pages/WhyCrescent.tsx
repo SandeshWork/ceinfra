@@ -25,10 +25,10 @@ export default function WhyCrescent() {
             >
               🇮🇳 Pan India Operations
             </motion.div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Why Choose <span className="text-[#FF6A00]">CE Infrastructure</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Safety, reliability, and excellence across India – Your trusted infrastructure partner
             </p>
           </motion.div>
@@ -82,8 +82,8 @@ export default function WhyCrescent() {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-[#1A2639] text-white p-8 rounded-xl h-full">
-                  <div className="text-6xl font-bold opacity-20 mb-4 text-[#ffffff]">
+                <div className="bg-[#1A2639] text-white p-6 sm:p-8 rounded-xl h-full">
+                  <div className="text-4xl sm:text-6xl font-bold opacity-20 mb-3 sm:mb-4 text-[#ffffff]">
                     {step.step}
                   </div>
                   <step.icon className="text-[#FF6A00] mb-4" size={40} />
@@ -211,19 +211,19 @@ export default function WhyCrescent() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm p-12 rounded-2xl border border-white/20"
+              className="bg-white/10 backdrop-blur-sm p-6 sm:p-12 rounded-2xl border border-white/20"
             >
               <div className="text-center">
                 <Zap className="text-[#FF6A00] mx-auto mb-6" size={64} />
-                <div className="text-5xl font-bold mb-4">30%</div>
-                <p className="text-xl mb-8">Reduction in Carbon Emissions</p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="text-4xl sm:text-5xl font-bold mb-3 sm:mb-4">30%</div>
+                <p className="text-base sm:text-xl mb-6 sm:mb-8">Reduction in Carbon Emissions</p>
+                <div className="grid grid-cols-2 gap-3 sm:gap-6">
                   <div>
-                    <div className="text-3xl font-bold text-[#FF6A00] mb-2">25+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-[#FF6A00] mb-1 sm:mb-2">25+</div>
                     <p className="text-sm text-gray-300">Electric Units</p>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-[#FF6A00] mb-2">100%</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-[#FF6A00] mb-1 sm:mb-2">100%</div>
                     <p className="text-sm text-gray-300">Green Certified</p>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export default function WhyCrescent() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center bg-gray-50 p-8 rounded-xl border-2 border-[#FF6A00]"
               >
-                <div className="text-5xl font-bold text-[#FF6A00] mb-4">{metric.value}</div>
+                <div className="text-3xl sm:text-5xl font-bold text-[#FF6A00] mb-3 sm:mb-4">{metric.value}</div>
                 <h3 className="text-xl font-bold text-[#1A2639] mb-3">{metric.title}</h3>
                 <p className="text-gray-600">{metric.description}</p>
               </motion.div>
@@ -289,8 +289,8 @@ export default function WhyCrescent() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="text-6xl text-[#1A2639] mb-6">"</div>
-            <p className="text-2xl md:text-3xl font-medium mb-8 text-[#ffffff]">
+            <div className="text-4xl sm:text-6xl text-[#1A2639] mb-4 sm:mb-6">"</div>
+            <p className="text-lg sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-[#ffffff]">
               CE Infrastructure LLP has consistently exceeded our expectations. Their combination of top-tier equipment, skilled operators, and unwavering commitment to safety makes them our preferred partner.
             </p>
             <div className="text-[#1A2639]">

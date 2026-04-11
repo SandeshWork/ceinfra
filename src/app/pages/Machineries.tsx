@@ -193,13 +193,13 @@ export default function Machineries() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Our{" "}
               <span className="text-[#FF6A00]">
                 Machineries
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+            <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto mb-4">
               Comprehensive range of specialized heavy equipment
               for construction, infrastructure, and industrial
               projects
@@ -208,7 +208,7 @@ export default function Machineries() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="inline-block bg-[#FF6A00] px-6 py-3 rounded-full font-bold text-lg text-[#ffffff]"
+              className="inline-block bg-[#FF6A00] px-4 py-2 sm:px-6 sm:py-3 rounded-full font-bold text-sm sm:text-lg text-[#ffffff]"
             >
               150+ Types of Machinery
             </motion.div>
@@ -225,17 +225,17 @@ export default function Machineries() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-3 bg-[#1A2639] text-white px-8 py-6 rounded-2xl shadow-2xl">
-              <Star className="text-[#FF6A00]" size={40} />
+            <div className="inline-flex items-center gap-2 sm:gap-3 bg-[#1A2639] text-white px-4 py-4 sm:px-8 sm:py-6 rounded-2xl shadow-2xl">
+              <Star className="text-[#FF6A00] flex-shrink-0" size={28} />
               <div className="text-left">
-                <div className="text-2xl font-bold">
+                <div className="text-lg sm:text-2xl font-bold">
                   Available Across India
                 </div>
-                <div className="text-sm text-gray-300">
+                <div className="text-xs sm:text-sm text-gray-300">
                   Pan-India Service Network
                 </div>
               </div>
-              <Star className="text-[#FF6A00]" size={40} />
+              <Star className="text-[#FF6A00] flex-shrink-0" size={28} />
             </div>
           </motion.div>
         </div>
@@ -333,7 +333,7 @@ export default function Machineries() {
             </span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 title: "Latest Technology",

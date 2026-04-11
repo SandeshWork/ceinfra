@@ -192,7 +192,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 drop-shadow-lg"
           >
             Pan India{" "}
             <span className="text-[#FF6A00]">Infrastructure Solutions</span>
@@ -201,7 +201,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md"
+            className="text-base sm:text-xl md:text-2xl text-gray-100 mb-6 sm:mb-8 max-w-3xl mx-auto drop-shadow-md"
           >
             Infrastructure Excellence by CE Infrastructure LLP
           </motion.p>
@@ -236,7 +236,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-3 mt-10"
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-10"
           >
             {heroCarouselImages[currentImageIndex].highlights.map((stat, i) => (
               <motion.div
@@ -244,10 +244,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.25 + i * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3 text-center min-w-[100px]"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-3 py-2 sm:px-5 sm:py-3 text-center min-w-[80px] sm:min-w-[100px]"
               >
-                <div className="text-[#FF6A00] font-bold text-lg leading-tight">{stat.value}</div>
-                <div className="text-white/75 text-xs font-medium mt-0.5 leading-tight">{stat.label}</div>
+                <div className="text-[#FF6A00] font-bold text-base sm:text-lg leading-tight">{stat.value}</div>
+                <div className="text-white/75 text-[10px] sm:text-xs font-medium mt-0.5 leading-tight">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -312,7 +312,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="bg-[#1A2639] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -403,7 +403,7 @@ export default function Home() {
               {clientLogos.map((client, index) => (
                 <div
                   key={`logo-1-${index}`}
-                  className="bg-white p-6 rounded-lg shadow-md flex items-center justify-center hover:shadow-xl transition-all flex-shrink-0 w-48 h-32"
+                  className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex items-center justify-center hover:shadow-xl transition-all flex-shrink-0 w-36 h-24 sm:w-48 sm:h-32"
                 >
                   <img
                     src={client.logo}
@@ -416,7 +416,7 @@ export default function Home() {
               {clientLogos.map((client, index) => (
                 <div
                   key={`logo-2-${index}`}
-                  className="bg-white p-6 rounded-lg shadow-md flex items-center justify-center hover:shadow-xl transition-all flex-shrink-0 w-48 h-32"
+                  className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex items-center justify-center hover:shadow-xl transition-all flex-shrink-0 w-36 h-24 sm:w-48 sm:h-32"
                 >
                   <img
                     src={client.logo}
