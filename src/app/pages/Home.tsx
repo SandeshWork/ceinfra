@@ -162,7 +162,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Carousel */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
         {/* Carousel Background Images */}
         <div className="absolute inset-0">
           {heroCarouselImages.map((image, index) => (
