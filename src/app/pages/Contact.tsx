@@ -6,6 +6,9 @@ import {
   Clock,
   MessageCircle,
   Send,
+  User,
+  Building2,
+  Briefcase,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -177,18 +180,28 @@ export default function Contact() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border border-gray-100"
             >
-              <h2 className="text-2xl font-bold text-[#1A2639] mb-6">
-                Send Us a Message
-              </h2>
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-[#1A2639] mb-2">
+                  Send Us a Message
+                </h2>
+                <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours</p>
+              </div>
               <form
                 onSubmit={handleSubmit}
-                className="space-y-4"
+                className="space-y-6"
               >
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Full Name *
+                {/* Name Field */}
+                <motion.div
+                  whileFocus={{ scale: 1.01 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className="relative group"
+                >
+                  <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <User size={18} className="text-[#FF6A00]" />
+                    Full Name
+                    <span className="text-[#FF6A00] ml-auto">*</span>
                   </label>
                   <input
                     type="text"
@@ -196,15 +209,23 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
+                    className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all"
                     placeholder="John Doe"
                   />
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email *
+                {/* Email and Phone Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Email */}
+                  <motion.div
+                    whileFocus={{ scale: 1.01 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="relative"
+                  >
+                    <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                      <Mail size={18} className="text-[#FF6A00]" />
+                      Email
+                      <span className="text-[#FF6A00]">*</span>
                     </label>
                     <input
                       type="email"
@@ -212,13 +233,21 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
+                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all"
                       placeholder="john@example.com"
                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone *
+                  </motion.div>
+
+                  {/* Phone */}
+                  <motion.div
+                    whileFocus={{ scale: 1.01 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="relative"
+                  >
+                    <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                      <Phone size={18} className="text-[#FF6A00]" />
+                      Phone
+                      <span className="text-[#FF6A00]">*</span>
                     </label>
                     <input
                       type="tel"
@@ -226,14 +255,20 @@ export default function Contact() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
+                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all"
                       placeholder="+91 98765 43210"
                     />
-                  </div>
+                  </motion.div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                {/* Company Field */}
+                <motion.div
+                  whileFocus={{ scale: 1.01 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className="relative"
+                >
+                  <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <Building2 size={18} className="text-[#FF6A00]" />
                     Company
                   </label>
                   <input
@@ -241,73 +276,94 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
+                    className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all"
                     placeholder="Your Company Name"
                   />
-                </div>
+                </motion.div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Service Required *
+                {/* Service Dropdown */}
+                <motion.div
+                  whileFocus={{ scale: 1.01 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className="relative"
+                >
+                  <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <Briefcase size={18} className="text-[#FF6A00]" />
+                    Service Required
+                    <span className="text-[#FF6A00]">*</span>
                   </label>
-                  <select
-                    name="service"
-                    required
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
-                  >
-                    <option value="">Select a service</option>
+                  <div className="relative">
+                    <select
+                      name="service"
+                      required
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="">Select a service</option>
 
-                    <optgroup label="Machineries">
-                      <option value="transit-mixer">
-                        Transit Mixer
-                      </option>
-                      <option value="concrete-boom-placers">
-                        Concrete Boom Placers
-                      </option>
-                      <option value="boom-pumps">
-                        Boom Pumps
-                      </option>
-                      <option value="piling-rigs">
-                        Piling Rigs
-                      </option>
-                      <option value="barges">Barges</option>
-                      <option value="fork-lifts">
-                        Fork Lifts
-                      </option>
-                      <option value="pick-carry-cranes">
-                        Pick and Carry Cranes
-                      </option>
-                      <option value="telehandlers">
-                        Telehandlers
-                      </option>
-                      <option value="puller-axles">
-                        Puller Axles
-                      </option>
-                    </optgroup>
+                      <optgroup label="Machineries">
+                        <option value="transit-mixer">
+                          Transit Mixer
+                        </option>
+                        <option value="concrete-boom-placers">
+                          Concrete Boom Placers
+                        </option>
+                        <option value="boom-pumps">
+                          Boom Pumps
+                        </option>
+                        <option value="piling-rigs">
+                          Piling Rigs
+                        </option>
+                        <option value="barges">Barges</option>
+                        <option value="fork-lifts">
+                          Fork Lifts
+                        </option>
+                        <option value="pick-carry-cranes">
+                          Pick and Carry Cranes
+                        </option>
+                        <option value="telehandlers">
+                          Telehandlers
+                        </option>
+                        <option value="puller-axles">
+                          Puller Axles
+                        </option>
+                      </optgroup>
 
-                    <optgroup label="Projects">
-                      <option value="ship-repair">
-                        Ship Repair
-                      </option>
-                      <option value="pier-girder-erection">
-                        Pier Girder Erection
-                      </option>
-                      <option value="piling-foundation">
-                        Piling Foundation Works
-                      </option>
-                    </optgroup>
+                      <optgroup label="Projects">
+                        <option value="ship-repair">
+                          Ship Repair
+                        </option>
+                        <option value="pier-girder-erection">
+                          Pier Girder Erection
+                        </option>
+                        <option value="piling-foundation">
+                          Piling Foundation Works
+                        </option>
+                      </optgroup>
 
-                    <option value="other">
-                      Other / General Inquiry
-                    </option>
-                  </select>
-                </div>
+                      <option value="other">
+                        Other / General Inquiry
+                      </option>
+                    </select>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                      <svg className="w-5 h-5 text-[#1A2639]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
+                  </div>
+                </motion.div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message *
+                {/* Message Field */}
+                <motion.div
+                  whileFocus={{ scale: 1.01 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className="relative"
+                >
+                  <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                    <MessageCircle size={18} className="text-[#FF6A00]" />
+                    Message
+                    <span className="text-[#FF6A00]">*</span>
                   </label>
                   <textarea
                     name="message"
@@ -315,15 +371,21 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg outline-none focus:border-[#FF6A00] transition-colors"
+                    className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl outline-none focus:border-[#FF6A00] focus:shadow-lg focus:shadow-[#FF6A00]/20 transition-all resize-none"
                     placeholder="Tell us about your project requirements..."
                   />
-                </div>
+                  <div className="text-xs text-gray-500 mt-2">
+                    {formData.message.length}/500 characters recommended
+                  </div>
+                </motion.div>
 
-                <button
+                {/* Submit Button */}
+                <motion.button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-[#1A2639] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                  whileTap={{ scale: isLoading ? 1 : 0.98 }}
+                  className="w-full bg-gradient-to-r from-[#1A2639] to-[#1A2639]/80 hover:from-[#FF6A00] hover:to-[#FF6A00]/80 text-white px-6 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:from-[#1A2639] disabled:hover:to-[#1A2639]/80"
                 >
                   {isLoading ? (
                     <>
@@ -334,7 +396,6 @@ export default function Contact() {
                           repeat: Infinity,
                           ease: "linear",
                         }}
-                        className="w-5 h-5"
                       >
                         <Send size={20} />
                       </motion.div>
@@ -346,7 +407,11 @@ export default function Contact() {
                       Send Message
                     </>
                   )}
-                </button>
+                </motion.button>
+
+                <p className="text-xs text-gray-500 text-center pt-4">
+                  We respect your privacy. Your information will never be shared.
+                </p>
               </form>
             </motion.div>
 
