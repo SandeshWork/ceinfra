@@ -110,7 +110,7 @@ export default function Layout() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-[#FF6A00] p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
