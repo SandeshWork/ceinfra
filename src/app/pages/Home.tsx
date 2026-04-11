@@ -39,28 +39,58 @@ const clientLogos = [
 const heroCarouselImages = [
   {
     url: "https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Aerial lift equipment at construction site"
+    alt: "Aerial lift equipment at construction site",
+    highlights: [
+      { value: "150+", label: "Machinery Types" },
+      { value: "IPAF Certified", label: "Operators" },
+      { value: "Pan India", label: "Operations" },
+    ],
   },
   {
     url: "https://images.unsplash.com/photo-1752980628969-62c587373c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHJhaWwlMjBjb25zdHJ1Y3Rpb24lMjBicmlkZ2V8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Metro rail and bridge construction"
+    alt: "Metro rail and bridge construction",
+    highlights: [
+      { value: "500+", label: "Projects Delivered" },
+      { value: "Metro & Rail", label: "Specialisation" },
+      { value: "Zero LTI", label: "Safety Record" },
+    ],
   },
   {
     url: "https://images.unsplash.com/photo-1762530358132-94b652b2e514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY3JhbmUlMjBwaWVyJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MjQ3Mzc4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Industrial crane and pier construction"
+    alt: "Industrial crane and pier construction",
+    highlights: [
+      { value: "100T+", label: "Lifting Capacity" },
+      { value: "Marine Works", label: "Port & Pier" },
+      { value: "24/7", label: "Site Support" },
+    ],
   },
   {
     url: "https://images.unsplash.com/photo-1771793307225-f92a984b3d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib29tJTIwbGlmdCUyMGFlcmlhbCUyMHBsYXRmb3JtJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3NTQwOTMwMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Boom lift aerial platform construction"
+    alt: "Boom lift aerial platform construction",
+    highlights: [
+      { value: "32+ Cities", label: "Across India" },
+      { value: "Trained Crew", label: "With Every Machine" },
+      { value: "97%", label: "Equipment Uptime" },
+    ],
   },
   {
     url: "https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Industrial manufacturing plant"
+    alt: "Industrial manufacturing plant",
+    highlights: [
+      { value: "9+ Sectors", label: "Industry Served" },
+      { value: "Heavy Industry", label: "Expertise" },
+      { value: "On-Site", label: "Maintenance" },
+    ],
   },
   {
     url: "https://images.unsplash.com/photo-1768128834332-7d3479c8d634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjByZWZpbmVyeSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzI0NzM3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    alt: "Oil refinery equipment and infrastructure"
-  }
+    alt: "Oil refinery equipment and infrastructure",
+    highlights: [
+      { value: "Oil & Gas", label: "Sector Ready" },
+      { value: "HAZMAT", label: "Compliant Fleet" },
+      { value: "ISO Certified", label: "Processes" },
+    ],
+  },
 ];
 
 function Counter({
@@ -159,7 +189,6 @@ export default function Home() {
         {/* Carousel Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <motion.h1
-            key={currentImageIndex}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -169,7 +198,6 @@ export default function Home() {
             <span className="text-[#FF6A00]">Infrastructure Solutions</span>
           </motion.h1>
           <motion.p
-            key={`desc-${currentImageIndex}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -178,7 +206,6 @@ export default function Home() {
             Infrastructure Excellence by CE Infrastructure LLP
           </motion.p>
           <motion.div
-            key={`buttons-${currentImageIndex}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -201,6 +228,28 @@ export default function Home() {
             >
               Download Capability Profile
             </button>
+          </motion.div>
+
+          {/* Per-slide highlights — animate with each image change */}
+          <motion.div
+            key={`highlights-${currentImageIndex}`}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-wrap justify-center gap-3 mt-10"
+          >
+            {heroCarouselImages[currentImageIndex].highlights.map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.25 + i * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-5 py-3 text-center min-w-[100px]"
+              >
+                <div className="text-[#FF6A00] font-bold text-lg leading-tight">{stat.value}</div>
+                <div className="text-white/75 text-xs font-medium mt-0.5 leading-tight">{stat.label}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 
