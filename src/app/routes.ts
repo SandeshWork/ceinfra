@@ -2,7 +2,7 @@ import { createBrowserRouter, redirect } from "react-router";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Solutions from "./pages/Solutions";
+import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Machineries from "./pages/Machineries";
 import Projects from "./pages/Projects";
@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "about", Component: About },
-      { path: "solutions", Component: Solutions },
+      { path: "services", Component: Services },
       { path: "industries", Component: Industries },
       { path: "machineries", Component: Machineries },
       { 

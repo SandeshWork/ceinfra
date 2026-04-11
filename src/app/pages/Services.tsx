@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { Truck, Building2, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
-export default function Solutions() {
+export default function Services() {
   return (
     <div>
       {/* Hero Section */}
@@ -19,7 +19,7 @@ export default function Solutions() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-[#FF6A00]">Solutions</span>
+              Our <span className="text-[#FF6A00]">Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive equipment and services for your infrastructure needs

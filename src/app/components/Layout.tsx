@@ -10,7 +10,7 @@ import footerLogo from "../../assets/footer-logo.png";
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Layout() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Solutions", path: "/solutions" },
+    { name: "Services", path: "/services" },
     { name: "Industries", path: "/industries" },
     { name: "Why CE Infrastructure", path: "/why-crescent" },
     { name: "Careers", path: "/careers" },
@@ -56,22 +56,22 @@ export default function Layout() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6 bg-[#ff6a0000]">
               {navLinks.map((link) => {
-                if (link.name === "Solutions") {
+                if (link.name === "Services") {
                   return (
                     <div
                       key={link.path}
                       className="relative"
-                      onMouseEnter={() => setIsSolutionsOpen(true)}
-                      onMouseLeave={() => setIsSolutionsOpen(false)}
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
                     >
                       <Link
                         to={link.path}
                         className={`text-sm font-medium transition-colors hover:text-[#FF6A00] flex items-center gap-1 py-2 ${ location.pathname === link.path || location.pathname === "/machineries" || location.pathname === "/projects" ? "text-[#1a2639]" : "text-#1a2639" } text-[#1a2639]`}
                       >
                         {link.name}
-                        <ChevronDown size={16} className={`transition-transform ${isSolutionsOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
                       </Link>
-                      {isSolutionsOpen && (
+                      {isServicesOpen && (
                         <div className="absolute top-full left-0 pt-2 z-50">
                           <div className="w-48 bg-white rounded-lg shadow-xl py-2">
                             <Link
@@ -110,7 +110,7 @@ export default function Layout() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-black p-2"
+              className="lg:hidden text-white p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -122,7 +122,7 @@ export default function Layout() {
           <div className="lg:hidden bg-[#1A2639] border-t border-white/10">
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => {
-                if (link.name === "Solutions") {
+                if (link.name === "Services") {
                   return (
                     <div key={link.path}>
                       <Link
@@ -192,8 +192,11 @@ export default function Layout() {
                   <div className="text-xs text-[#ffffff]">by Crescent Enterprises</div>
                 </div>
               </div>
-              <p className="text-gray-300 text-sm mb-6">
-                Safety-first infrastructure partner across industries. Building foundations, erecting structures, delivering excellence.
+              <p className="text-gray-300 text-sm mb-2">
+                Pan India infrastructure solutions provider. Safety-first partner delivering excellence across industries.
+              </p>
+              <p className="text-[#FF6A00] text-sm font-semibold mb-6">
+                Pan India Operations
               </p>
               {/* Social Media Icons */}
               <div className="flex gap-4">
@@ -237,7 +240,7 @@ export default function Layout() {
               <h3 className="font-semibold mb-4 text-[#ffffff]">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-gray-300 hover:text-[#FF6A00]">About Us</Link></li>
-                <li><Link to="/solutions" className="text-gray-300 hover:text-[#FF6A00]">Solutions</Link></li>
+                <li><Link to="/services" className="text-gray-300 hover:text-[#FF6A00]">Services</Link></li>
                 <li><Link to="/industries" className="text-gray-300 hover:text-[#FF6A00]">Industries</Link></li>
                 <li><Link to="/why-crescent" className="text-gray-300 hover:text-[#FF6A00]">Why CE Infrastructure</Link></li>
               </ul>

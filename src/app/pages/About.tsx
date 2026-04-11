@@ -20,8 +20,8 @@ export default function About() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About <span className="text-[#FF6A00]">CE Infrastructure LLP</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From equipment rentals to integrated execution partner – building trust through safety, innovation, and excellence
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-semibold">
+              Crescent Enterprises is a leading infrastructure solutions provider delivering high-performance machinery and services across India.
             </p>
           </motion.div>
         </div>
@@ -61,7 +61,7 @@ export default function About() {
     alt="Industrial construction site"
     className="rounded-xl shadow-2xl"
   />
-  <div className="absolute inset-0 bg-white/40 rounded-xl" />
+  <div className="absolute inset-0 bg-white/10 rounded-xl" />
 </div>
             </motion.div>
           </div>
@@ -96,6 +96,86 @@ export default function About() {
               <p className="text-lg text-[#ffffff]">
                 To deliver comprehensive elevation solutions with zero-compromise safety, industry-leading uptime, and exceptional value through innovation, skilled manpower, and customer-centric service.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Competency */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A2639] mb-4">
+              Our <span className="text-[#FF6A00]">Core Competency</span>
+            </h2>
+            <p className="text-[#FF6A00] font-semibold text-lg mb-8">
+              SERVICE BEFORE SELF
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Being a service provider, our priority is to provide on-time smooth service to our clients to finish up their work in time, which will lead to saving their money. For timely service, we have a strong team focusing on operational and maintenance of the equipment and site work.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Our team is active 24/7, regardless of the time. We are up for challenges day and night to make our service utmost. The difference between a good service and a service is just a word difference in books, but for us, that good is what we are serving for and will be serving at our best.
+              </p>
+              
+              <div className="bg-[#1A2639] text-white p-8 rounded-xl mt-8">
+                <h3 className="text-xl font-bold mb-4">Our Team's Commitment</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-[#FF6A00] mt-1 flex-shrink-0" size={20} />
+                    <span>Preventive measures to make equipment work smoothly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-[#FF6A00] mt-1 flex-shrink-0" size={20} />
+                    <span>Working and analyzing day and night across all our regions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="text-[#FF6A00] mt-1 flex-shrink-0" size={20} />
+                    <span>Ready for challenges at any time to ensure project success</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {[
+                { label: "24/7", value: "Service Available", icon: "🕐" },
+                { label: "Pan India", value: "Operations", icon: "🇮🇳" },
+                { label: "97%", value: "Uptime", icon: "📈" },
+                { label: "50+", value: "Equipment Assets", icon: "🏗️" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-[#FF6A00] to-[#FF8533] p-6 rounded-lg text-white text-center"
+                >
+                  <div className="text-3xl mb-2">{stat.icon}</div>
+                  <div className="text-2xl font-bold mb-1">{stat.label}</div>
+                  <div className="text-sm opacity-90">{stat.value}</div>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>

@@ -93,9 +93,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
-            Building{" "}
-            <span className="text-[#FF6A00]">Foundations</span>{" "}
-            for the Future
+            Pan India{" "}
+            <span className="text-[#FF6A00]">Infrastructure Solutions</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -279,7 +278,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A2639] mb-4">
-              Our Solutions
+              Our Services
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Comprehensive equipment and services for your
@@ -354,10 +353,10 @@ export default function Home() {
             className="text-center mt-12"
           >
             <Link
-              to="/solutions"
+              to="/services"
               className="inline-flex items-center gap-2 bg-[#1A2639] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all"
             >
-              Explore All Solutions <ArrowRight size={20} />
+              Explore All Services <ArrowRight size={20} />
             </Link>
           </motion.div>
         </div>

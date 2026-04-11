@@ -5,58 +5,58 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const industries = [
   {
+    title: "Power",
+    icon: Zap,
+    description: "Providing machinery solutions for power plant projects.",
+    image: "https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    applications: ["Turbine maintenance", "Solar panel installation", "Wind turbine service", "Cooling tower work"]
+  },
+  {
+    title: "Telecom",
+    icon: Plane,
+    description: "Supporting telecom infrastructure installation and maintenance.",
+    image: "https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    applications: ["Tower installation", "Network equipment setup", "Infrastructure maintenance", "Antenna deployment"]
+  },
+  {
+    title: "Railways",
+    icon: Train,
+    description: "Turnkey pier erection and specialized access for rail infrastructure projects.",
+    image: "https://images.unsplash.com/photo-1752980628969-62c587373c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHJhaWwlMjBjb25zdHJ1Y3Rpb24lMjBicmlkZ2V8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    applications: ["Pier erection", "Girder launching", "Station construction", "Overhead line work"]
+  },
+  {
     title: "Construction",
     icon: Building2,
-    description: "Providing safe access solutions for high-rise buildings, commercial complexes, and residential projects.",
+    description: "Providing safe access solutions for high-rise buildings and projects.",
     image: "https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     applications: ["Facade work", "Interior finishing", "MEP installations", "Safety inspections"]
   },
   {
     title: "Oil & Gas",
     icon: Zap,
-    description: "Supporting critical maintenance and installation work in refineries, petrochemical plants, and offshore facilities.",
+    description: "Supporting critical maintenance and installation work in refineries and petrochemical plants.",
     image: "https://images.unsplash.com/photo-1768128834332-7d3479c8d634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjByZWZpbmVyeSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzI0NzM3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     applications: ["Plant maintenance", "Pipeline inspection", "Tank cleaning", "Emergency repairs"]
   },
   {
-    title: "Thermal & Renewables",
-    icon: TrendingUp,
-    description: "Enabling installation and maintenance of power generation facilities including thermal, solar, and wind projects.",
-    image: "https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    applications: ["Turbine maintenance", "Solar panel installation", "Wind turbine service", "Cooling tower work"]
-  },
-  {
-    title: "Rail & Metro",
-    icon: Train,
-    description: "Turnkey pier erection and specialized access for metro rail and railway infrastructure projects.",
-    image: "https://images.unsplash.com/photo-1752980628969-62c587373c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRybyUyMHJhaWwlMjBjb25zdHJ1Y3Rpb24lMjBicmlkZ2V8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    applications: ["Pier erection", "Girder launching", "Station construction", "Overhead line work"]
-  },
-  {
     title: "Manufacturing",
     icon: Factory,
-    description: "Supporting production facilities with equipment access for installation, maintenance, and upgrades.",
+    description: "Supporting production facilities with equipment access for installation and maintenance.",
     image: "https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     applications: ["Equipment installation", "Warehouse operations", "Facility maintenance", "Automation setup"]
   },
   {
     title: "Ports & Shipyards",
     icon: Ship,
-    description: "Comprehensive ship repair services and port infrastructure support with specialized marine expertise.",
+    description: "Comprehensive ship repair services and port infrastructure support.",
     image: "https://images.unsplash.com/photo-1758553527857-e23046f88a63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaGlweWFyZCUyMHJlcGFpciUyMGRvY2t8ZW58MXx8fHwxNzcyNDczNzgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     applications: ["Ship repairs", "Drydock operations", "Port equipment", "Hull maintenance"]
   },
   {
-    title: "Aviation & Events",
-    icon: Plane,
-    description: "Specialized access solutions for aircraft maintenance hangars and large-scale event setups.",
-    image: "https://images.unsplash.com/photo-1765435149256-56f3ea3db68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZXJpYWwlMjBsaWZ0JTIwZXF1aXBtZW50JTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzI0NzM3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    applications: ["Aircraft maintenance", "Hangar work", "Event rigging", "Lighting installation"]
-  },
-  {
     title: "Infrastructure",
     icon: Wrench,
-    description: "Heavy lifting and logistics support for roads, bridges, and major infrastructure development.",
+    description: "Heavy lifting and logistics support for roads, bridges, and major infrastructure.",
     image: "https://images.unsplash.com/photo-1762530358132-94b652b2e514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY3JhbmUlMjBwaWVyJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MjQ3Mzc4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     applications: ["Bridge construction", "Road development", "Utility installation", "Structural work"]
   }
