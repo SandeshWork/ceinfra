@@ -1,33 +1,4 @@
-import { createBrowserRouter, redirect } from "react-router";
-import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries";
-import Machineries from "./pages/Machineries";
-import Projects from "./pages/Projects";
-import WhyCrescent from "./pages/WhyCrescent";
-import Careers from "./pages/Careers";
-import Contact from "./pages/Contact";
+import { createBrowserRouter } from "react-router";
+import { routeDefinitions } from "./route-definitions";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: Layout,
-    children: [
-      { index: true, Component: Home },
-      { path: "about", Component: About },
-      { path: "services", Component: Services },
-      { path: "industries", Component: Industries },
-      { path: "machineries", Component: Machineries },
-      { 
-        path: "fleet", 
-        loader: () => redirect("/machineries")
-      },
-      { path: "projects", Component: Projects },
-      { path: "why-crescent", Component: WhyCrescent },
-      { path: "careers", Component: Careers },
-      { path: "contact", Component: Contact },
-    ],
-  },
-]);
+export const router = createBrowserRouter(routeDefinitions);
