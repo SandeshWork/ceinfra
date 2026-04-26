@@ -218,13 +218,15 @@ export default function Layout() {
                 >
                   <Instagram size={20} className="text-white" />
                 </a>
-                <button
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors cursor-not-allowed opacity-50"
+                <a
+                  href="https://www.facebook.com/profile.php?id=61566683195244"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors"
                   title="Facebook"
-                  disabled
                 >
                   <Facebook size={20} className="text-white" />
-                </button>
+                </a>
                 <button
                   className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors cursor-not-allowed opacity-50"
                   title="YouTube"
