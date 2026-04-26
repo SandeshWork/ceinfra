@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/pourn/.claude/**)",
+      "Read(//c/Users/pourn/Desktop/**)",
+      "Read(//c/Users/pourn/AppData/Roaming/Code/**)",
+      "Read(//c/Users/pourn/AppData/Roaming/**)",
+      "Bash(cp c:/Users/pourn/Downloads/CE_Infra_Renamed/boom_lift1.jpeg 'c:/Users/pourn/Desktop/CE Infrastructure LLP/src/assets/boom-lift-jlg1.jpeg')",
+      "Bash(cp c:/Users/pourn/Downloads/CE_Infra_Renamed/boom_lift10.jpeg 'c:/Users/pourn/Desktop/CE Infrastructure LLP/src/assets/boom-lift-jlg2.jpeg')",
+      "Bash(cp c:/Users/pourn/Downloads/CE_Infra_Renamed/boom_lift18.jpeg 'c:/Users/pourn/Desktop/CE Infrastructure LLP/src/assets/boom-lift-jlg3.jpeg')",
+      "Bash(cp c:/Users/pourn/Downloads/CE_Infra_Renamed/articulating_boom_lift1.jpeg 'c:/Users/pourn/Desktop/CE Infrastructure LLP/src/assets/articulating-boom-lift1.jpeg')",
+      "Bash(cp c:/Users/pourn/Downloads/CE_Infra_Renamed/articulating_boom_lift2.jpeg 'c:/Users/pourn/Desktop/CE Infrastructure LLP/src/assets/articulating-boom-lift2.jpeg')",
+      "Bash(npm run:*)"
+    ]
+  }
+}

@@ -14,6 +14,10 @@ import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import boomPumpImage from "../../assets/boom-pump.png";
 import scissorLiftImage from "../../assets/scissor-lift.png";
+import boomLiftImg from "../../assets/articulating-boom-lift1.jpeg";
+import truckMountedLiftImg from "../../assets/truck-mounted-lift1.jpeg";
+import pilingRigImg from "../../assets/crawler-crane-sany1.jpeg";
+import pickCarryImg from "../../assets/xcmg-crawler-crane1.jpeg";
 
 const machineryCategories = [
   {
@@ -22,8 +26,7 @@ const machineryCategories = [
     description:
       "Versatile aerial work platforms for high-reach applications in construction and maintenance",
     icon: Shield,
-    image:
-      "https://images.unsplash.com/photo-1771793307225-f92a984b3d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib29tJTIwbGlmdCUyMGFlcmlhbCUyMHBsYXRmb3JtJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3NTQwOTMwMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: boomLiftImg,
     specs: [
       "Working heights from 12m to 43m reach",
       "Articulating & telescopic models",
@@ -49,8 +52,7 @@ const machineryCategories = [
     description:
       "Compact tracked lifts and truck-mounted platforms for complex access scenarios",
     icon: Shield,
-    image:
-      "https://images.unsplash.com/photo-1671293316362-0038564fe14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGlkZXIlMjBsaWZ0JTIwdHJhY2tlZCUyMHBsYXRmb3JtfGVufDF8fHx8MTc3NTQwOTMwMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: truckMountedLiftImg,
     specs: [
       "Specialized units reaching up to 50m+ for complex access requirements",
       "Narrow access capability",
@@ -98,8 +100,7 @@ const machineryCategories = [
     description:
       "Advanced foundation piling equipment for deep foundation works",
     icon: Shield,
-    image:
-      "https://images.unsplash.com/photo-1662800172921-8b00a2b4a25a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWxpbmclMjByaWclMjBmb3VuZGF0aW9uJTIwZHJpbGxpbmd8ZW58MXx8fHwxNzc1NDA5MzA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: pilingRigImg,
     specs: [
       "CFA & Rotary drilling",
       "Up to 60m depth",
@@ -140,8 +141,7 @@ const machineryCategories = [
     description:
       "Mobile crane solutions for quick and efficient lifting operations",
     icon: Shield,
-    image:
-      "https://images.pexels.com/photos/29492015/pexels-photo-29492015.jpeg?_gl=1*1d610eu*_ga*Mjc4OTAwNDY1LjE3NjU3NTEyMTQ.*_ga_8JE65Q40S6*czE3NzU0MDg4MDgkbzQkZzEkdDE3NzU0MTAyNjMkajQ3JGwwJGgw",
+    image: pickCarryImg,
     specs: [
       "14 ton to 25 ton capacity",
       "Compact & maneuverable",

@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { CheckCircle, Award, TrendingUp, Ship, Building2, HardHat } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import shipRepairImg from "../../assets/ship-repair-boom-lift1.jpeg";
+import pierGirderImg from "../../assets/xcmg-crawler-crane-girder1.jpeg";
+import pilingImg from "../../assets/crawler-crane-sany2.jpeg";
 
 const projectCategories = [
   {
@@ -8,7 +11,7 @@ const projectCategories = [
     title: "Ship Repair",
     icon: Ship,
     description: "Comprehensive ship repair and maintenance services including drydock operations, hull maintenance, mechanical repairs, and marine system installations. Our integrated approach combines specialized equipment, skilled workforce, and efficient project management to minimize vessel downtime.",
-    image: "https://images.unsplash.com/photo-1763911660308-f38f2d54a466?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaGlwJTIwcmVwYWlyJTIwZG9jayUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzc0Mjk1NTI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: shipRepairImg,
     capabilities: [
       "Drydock maintenance and repairs",
       "Hull cleaning and painting",
@@ -29,7 +32,7 @@ const projectCategories = [
     title: "Pier Girder Erection",
     icon: Building2,
     description: "Expert turnkey solutions for pier construction and girder launching operations for elevated metro corridors, flyovers, and bridge projects. We provide end-to-end services including pier erection, segment launching, and structural installation with advanced equipment and safety protocols.",
-    image: "https://images.unsplash.com/photo-1646460072212-7ea22904038a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaWVyJTIwZ2lyZGVyJTIwYnJpZGdlJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3NDI5NTUyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: pierGirderImg,
     capabilities: [
       "Pier erection and construction",
       "Girder segment launching",
@@ -50,7 +53,7 @@ const projectCategories = [
     title: "Piling Foundation Works",
     icon: HardHat,
     description: "Advanced deep foundation solutions using state-of-the-art piling equipment and techniques. We specialize in CFA piling, rotary drilling, and various foundation systems for high-rise buildings, bridges, industrial structures, and infrastructure projects with precision and reliability.",
-    image: "https://images.unsplash.com/photo-1766595680992-31635890cf70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3VuZGF0aW9uJTIwcGlsaW5nJTIwY29uc3RydWN0aW9uJTIwc2l0ZXxlbnwxfHx8fDE3NzQyOTU1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: pilingImg,
     capabilities: [
       "CFA (Continuous Flight Auger) piling",
       "Rotary bored piling",
