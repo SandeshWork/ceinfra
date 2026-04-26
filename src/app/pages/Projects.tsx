@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { CheckCircle, Award, TrendingUp, Ship, Building2, HardHat } from "lucide-react";
+import { Link } from "react-router";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import shipRepairImg from "../../assets/ship-repair-boom-lift1.jpeg";
 import pierGirderImg from "../../assets/xcmg-crawler-crane-girder1.jpeg";
@@ -9,6 +10,7 @@ const projectCategories = [
   {
     id: 1,
     title: "Ship Repair",
+    serviceKey: "ship-repair",
     icon: Ship,
     description: "Comprehensive ship repair and maintenance services including drydock operations, hull maintenance, mechanical repairs, and marine system installations. Our integrated approach combines specialized equipment, skilled workforce, and efficient project management to minimize vessel downtime.",
     image: shipRepairImg,
@@ -30,6 +32,7 @@ const projectCategories = [
   {
     id: 2,
     title: "Pier Girder Erection",
+    serviceKey: "pier-girder-erection",
     icon: Building2,
     description: "Expert turnkey solutions for pier construction and girder launching operations for elevated metro corridors, flyovers, and bridge projects. We provide end-to-end services including pier erection, segment launching, and structural installation with advanced equipment and safety protocols.",
     image: pierGirderImg,
@@ -51,6 +54,7 @@ const projectCategories = [
   {
     id: 3,
     title: "Piling Foundation Works",
+    serviceKey: "piling-foundation",
     icon: HardHat,
     description: "Advanced deep foundation solutions using state-of-the-art piling equipment and techniques. We specialize in CFA piling, rotary drilling, and various foundation systems for high-rise buildings, bridges, industrial structures, and infrastructure projects with precision and reliability.",
     image: pilingImg,
@@ -201,13 +205,19 @@ export default function Projects() {
                   {/* Clients */}
                   <div className="bg-gradient-to-r from-[#1A2639] to-[#1A2639]/90 text-white p-6 rounded-xl">
                     <h4 className="font-bold mb-3 text-[#FF6A00]">Trusted by Leading Companies:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-5">
                       {project.clients.map((client, idx) => (
                         <span key={idx} className="bg-white/10 px-3 py-1 rounded-full text-sm">
                           {client}
                         </span>
                       ))}
                     </div>
+                    <Link
+                      to={`/contact?service=${project.serviceKey}`}
+                      className="block w-full bg-[#FF6A00] px-4 py-3 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all text-center text-white"
+                    >
+                      Get Quote for {project.title}
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -332,9 +342,12 @@ export default function Projects() {
             <p className="text-[#1A2639] text-lg mb-8 max-w-2xl mx-auto">
               Join the leading companies that trust CE Infrastructure LLP for their infrastructure needs
             </p>
-            <button className="bg-[#1A2639] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all shadow-lg">
+            <Link
+              to="/contact"
+              className="inline-block bg-[#1A2639] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1A2639]/90 transition-all shadow-lg"
+            >
               Discuss Your Project
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -10,18 +10,27 @@ import {
   Building2,
   Briefcase,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router";
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
-    service: "",
+    service: searchParams.get("service") ?? "",
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const service = searchParams.get("service");
+    if (service) {
+      setFormData((prev) => ({ ...prev, service }));
+    }
+  }, [searchParams]);
 
   const GOOGLE_SHEET_WEBAPP_URL =
     "https://script.google.com/macros/s/AKfycbx9D91i_ADkThBAeHLd42sHgmJkz3HP_Kp8FJquERlZlZi3blphyj4qmplAT1mPiIvwEw/exec";
@@ -303,6 +312,15 @@ export default function Contact() {
                       <option value="">Select a service</option>
 
                       <optgroup label="Machineries">
+                        <option value="boom-lifts">
+                          Boom Lifts
+                        </option>
+                        <option value="scissor-lifts">
+                          Scissor Lifts
+                        </option>
+                        <option value="spider-truck-mounted">
+                          Spider &amp; Truck-Mounted
+                        </option>
                         <option value="transit-mixer">
                           Transit Mixer
                         </option>

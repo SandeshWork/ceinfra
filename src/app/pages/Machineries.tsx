@@ -16,13 +16,15 @@ import boomPumpImage from "../../assets/boom-pump.png";
 import scissorLiftImage from "../../assets/scissor-lift.png";
 import boomLiftImg from "../../assets/articulating-boom-lift1.jpeg";
 import truckMountedLiftImg from "../../assets/truck-mounted-lift1.jpeg";
-import pilingRigImg from "../../assets/crawler-crane-sany1.jpeg";
-import pickCarryImg from "../../assets/xcmg-crawler-crane1.jpeg";
+import pilingRigImg from "../../assets/crawler-crane-sany2.jpeg";
+import pickCarryImg from "../../assets/mobile-crane-pick-carry.jpeg";
 
 const machineryCategories = [
   {
     id: 1,
     name: "Boom Lifts",
+    serviceKey: "boom-lifts",
+    imagePosition: "object-center",
     description:
       "Versatile aerial work platforms for high-reach applications in construction and maintenance",
     icon: Shield,
@@ -36,6 +38,8 @@ const machineryCategories = [
   {
     id: 2,
     name: "Scissor Lifts",
+    serviceKey: "scissor-lifts",
+    imagePosition: "object-center",
     description:
       "Stable vertical lifting platforms ideal for indoor and outdoor maintenance work",
     icon: Wrench,
@@ -49,6 +53,8 @@ const machineryCategories = [
   {
     id: 3,
     name: "Spider & Truck-Mounted",
+    serviceKey: "spider-truck-mounted",
+    imagePosition: "object-bottom",
     description:
       "Compact tracked lifts and truck-mounted platforms for complex access scenarios",
     icon: Shield,
@@ -62,6 +68,8 @@ const machineryCategories = [
   {
     id: 4,
     name: "Transit Mixer",
+    serviceKey: "transit-mixer",
+    imagePosition: "object-center",
     description:
       "High-capacity concrete mixing trucks for efficient on-site concrete delivery",
     icon: Wrench,
@@ -76,6 +84,8 @@ const machineryCategories = [
   {
     id: 5,
     name: "Concrete Boom Placers",
+    serviceKey: "concrete-boom-placers",
+    imagePosition: "object-center",
     description: "Precision concrete placement equipment for large-scale construction projects",
     icon: Shield,
     image: "https://images.unsplash.com/photo-1656846349663-a7e533721680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMHBsYWNpbmclMjBib29tJTIwY29uc3RydWN0aW9uJTIwc2l0ZSUyMHdpZGV8ZW58MXx8fHwxNzc1NDEwNzYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
@@ -84,6 +94,8 @@ const machineryCategories = [
   {
     id: 6,
     name: "Boom Pumps",
+    serviceKey: "boom-pumps",
+    imagePosition: "object-center",
     description:
       "Powerful concrete pumping systems for high-rise and infrastructure projects",
     icon: Shield,
@@ -97,6 +109,8 @@ const machineryCategories = [
   {
     id: 7,
     name: "Piling Rigs",
+    serviceKey: "piling-rigs",
+    imagePosition: "object-center",
     description:
       "Advanced foundation piling equipment for deep foundation works",
     icon: Shield,
@@ -110,6 +124,8 @@ const machineryCategories = [
   {
     id: 8,
     name: "Barges",
+    serviceKey: "barges",
+    imagePosition: "object-center",
     description:
       "Marine transportation and work platforms for port and offshore operations",
     icon: MapPin,
@@ -124,6 +140,8 @@ const machineryCategories = [
   {
     id: 9,
     name: "Fork Lifts",
+    serviceKey: "fork-lifts",
+    imagePosition: "object-center",
     description:
       "Versatile material handling equipment for various industrial applications",
     icon: Wrench,
@@ -138,6 +156,8 @@ const machineryCategories = [
   {
     id: 10,
     name: "Pick and Carry Cranes",
+    serviceKey: "pick-carry-cranes",
+    imagePosition: "object-center",
     description:
       "Mobile crane solutions for quick and efficient lifting operations",
     icon: Shield,
@@ -151,6 +171,8 @@ const machineryCategories = [
   {
     id: 11,
     name: "Telehandlers",
+    serviceKey: "telehandlers",
+    imagePosition: "object-center",
     description:
       "Telescopic material handlers for construction and industrial sites",
     icon: Wrench,
@@ -165,6 +187,8 @@ const machineryCategories = [
   {
     id: 12,
     name: "Puller Axles",
+    serviceKey: "puller-axles",
+    imagePosition: "object-center",
     description:
       "Heavy-duty axle systems for transporting oversized and heavy loads",
     icon: Wrench,
@@ -268,7 +292,7 @@ export default function Machineries() {
                   <ImageWithFallback
                     src={category.image}
                     alt={category.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${category.imagePosition}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A2639] to-transparent opacity-60" />
                   <div className="absolute bottom-4 left-4 right-4">
@@ -306,7 +330,7 @@ export default function Machineries() {
                   </div>
 
                   <Link
-                    to="/contact"
+                    to={`/contact?service=${category.serviceKey}`}
                     className="block w-full bg-[#FF6A00] px-4 py-3 rounded-lg font-semibold hover:bg-[#FF6A00]/90 transition-all text-center text-[#ffffff]"
                   >
                     Get Quote
