@@ -289,8 +289,13 @@ export default function Layout() {
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 text-center text-sm text-gray-400">
+          <div className="border-t border-white/10 pt-8 text-center text-sm text-gray-400 space-y-2">
             <p>&copy; {new Date().getFullYear()} CE Infrastructure LLP by Crescent Enterprises. All rights reserved.</p>
+            <p>
+              <Link to="/privacy-policy" className="hover:text-[#FF6A00] transition-colors">
+                Privacy Policy
+              </Link>
+            </p>
           </div>
         </div>
       </footer>

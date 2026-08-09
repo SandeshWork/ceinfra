@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import WhyCrescent from "./pages/WhyCrescent";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export const routeDefinitions = [
   {
@@ -25,6 +26,7 @@ export const routeDefinitions = [
       { path: "why-crescent", Component: WhyCrescent },
       { path: "careers", Component: Careers },
       { path: "contact", Component: Contact },
+      { path: "privacy-policy", Component: PrivacyPolicy },
     ],
   },
 ];
