@@ -201,7 +201,7 @@ export default function Layout() {
               {/* Social Media Icons */}
               <div className="flex gap-4">
                 <a
-                  href="https://www.linkedin.com/in/media-crescent-b17281402/"
+                  href="https://www.linkedin.com/company/ce-infrastructure-llp/posts/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors"

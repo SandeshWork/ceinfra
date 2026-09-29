@@ -125,7 +125,7 @@ export default function Careers() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {openings.slice(0, 2).map((job, index) => (
+            {openings.map((job, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}

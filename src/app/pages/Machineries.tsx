@@ -424,7 +424,15 @@ export default function Machineries() {
               >
                 Request Equipment Quote
               </Link>
-              <button className="bg-white text-[#1A2639] px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all shadow-lg">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/uc?export=download&id=1D7jNDX86QyTTe7QmKlbjGGt6gQLNwGZb",
+                    "_blank",
+                  )
+                }
+                className="bg-white text-[#1A2639] px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all shadow-lg"
+              >
                 Download Catalog
               </button>
             </div>

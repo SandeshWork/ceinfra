@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import { Award, Target, Users, TrendingUp, CheckCircle, Shield } from "lucide-react";
+import { Award, Target, Users, TrendingUp, CheckCircle, Shield, Linkedin } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import lakshMakad from "../../assets/laksh-makad-founder.jpg";
 
 export default function About() {
   return (
@@ -65,6 +66,86 @@ export default function About() {
 </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A2639] mb-4">
+              Leadership
+            </h2>
+            <p className="text-gray-600 text-lg">
+              The people driving CE Infrastructure LLP forward
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-5 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+          >
+            {/* Photo */}
+            <div className="lg:col-span-2 relative h-72 sm:h-96 lg:h-auto">
+              <img
+                src={lakshMakad}
+                alt="Laksh Makad, Director of Sales and Finance at CE Infrastructure LLP"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2639]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-transparent" />
+            </div>
+
+            {/* Content */}
+            <div className="lg:col-span-3 p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
+              <div className="text-5xl sm:text-6xl text-[#FF6A00] leading-none mb-2">
+                "
+              </div>
+              <p className="text-gray-700 text-base sm:text-xl leading-relaxed mb-6 sm:mb-8 italic">
+                It's not just about scaling operations. It's about
+                building a company that delivers reliability,
+                precision, and confidence every single time.
+              </p>
+
+              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
+                <div>
+                  <div className="font-bold text-[#1A2639] text-xl">
+                    Laksh Makad
+                  </div>
+                  <div className="text-[#FF6A00] font-semibold text-sm">
+                    Director of Sales and Finance
+                  </div>
+                </div>
+                <a
+                  href="https://www.linkedin.com/in/laksh-makad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-auto w-10 h-10 bg-[#1A2639] hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
+                  title="Laksh Makad on LinkedIn"
+                  aria-label="Laksh Makad on LinkedIn"
+                >
+                  <Linkedin size={18} className="text-white" />
+                </a>
+              </div>
+
+              <p className="text-gray-600 leading-relaxed">
+                Laksh leads Sales &amp; Finance at CE Infrastructure
+                LLP, working at the intersection of business
+                development and financial accountability. His focus
+                is building a system where clients trust the
+                company, teams perform with clarity, and outcomes
+                stay predictable — from expanding into new sectors to
+                strengthening partnerships and improving financial
+                efficiency.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

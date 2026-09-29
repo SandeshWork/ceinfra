@@ -162,7 +162,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section with Carousel */}
-      <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden">
         {/* Carousel Background Images */}
         <div className="absolute inset-0">
           {heroCarouselImages.map((image, index) => (
@@ -187,7 +187,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1A2639]/30 to-[#000000]/50 z-10" />
 
         {/* Carousel Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full pb-20 sm:pb-0">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -590,7 +590,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[##f4f5f7]]">
+      <section className="py-20 bg-[#f4f5f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
