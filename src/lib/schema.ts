@@ -1,0 +1,62 @@
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "CE Infrastructure LLP",
+  alternateName: "Crescent Enterprises",
+  url: "https://ceinfrastructure.in/",
+  description:
+    "Pan India infrastructure solutions provider offering boom lifts, crawler cranes, scissor lifts, piling rigs, and turnkey project execution including pier girder erection, ship repair, and piling foundation works.",
+  telephone: "+919152568545",
+  email: "sales@ceinfrastructure.in",
+  address: [
+    {
+      "@type": "PostalAddress",
+      name: "Operations Office",
+      streetAddress: "B-1047, 1st Floor, Bima Complex, Kalamboli Steel Market",
+      addressLocality: "Navi Mumbai",
+      postalCode: "410218",
+      addressCountry: "IN",
+    },
+    {
+      "@type": "PostalAddress",
+      name: "Admin Office",
+      streetAddress: "C-4084/85/86, 4th Floor, Bima Complex, Kalamboli Steel Market",
+      addressLocality: "Navi Mumbai",
+      postalCode: "410218",
+      addressCountry: "IN",
+    },
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  knowsAbout: [
+    "Boom Lift Rental",
+    "Scissor Lift Rental",
+    "Crawler Crane Hire",
+    "Truck Mounted Boom Lift",
+    "Piling Rig",
+    "Pier Girder Erection",
+    "Ship Repair Services",
+    "Piling Foundation Works",
+    "Aerial Work Platforms",
+    "Infrastructure Construction",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Equipment & Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Boom Lift Rental" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Scissor Lift Rental" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crawler Crane Hire" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Truck Mounted Boom Lift" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pier Girder Erection" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ship Repair Services" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Piling Foundation Works" } },
+    ],
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/ce-infrastructure-llp/posts/",
+    "https://www.instagram.com/ceinfrastructure/",
+  ],
+} as const;
