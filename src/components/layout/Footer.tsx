@@ -69,6 +69,7 @@ export default function Footer() {
               <li><Link href="/services" className="text-gray-300 hover:text-[#FF6A00]">Services</Link></li>
               <li><Link href="/industries" className="text-gray-300 hover:text-[#FF6A00]">Industries</Link></li>
               <li><Link href="/why-crescent" className="text-gray-300 hover:text-[#FF6A00]">Why CE Infrastructure</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-[#FF6A00]">Blog</Link></li>
             </ul>
           </div>
 

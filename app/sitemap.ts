@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { getPublishedPosts } from "@/lib/blog";
 
 const BASE_URL = "https://ceinfrastructure.in";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
@@ -16,12 +17,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/careers", priority: 0.6, changeFrequency: "weekly" },
     { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
     { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   ];
 
-  return routes.map((route) => ({
+  const staticEntries = routes.map((route) => ({
     url: `${BASE_URL}${route.path}`,
     lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
+
+  const posts = await getPublishedPosts();
+  const postEntries = posts.map(({ slug, entry }) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: entry.publishDate ? new Date(entry.publishDate) : now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...postEntries];
 }

@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Industries", path: "/industries" },
   { name: "Why CE Infrastructure", path: "/why-crescent" },
+  { name: "Blog", path: "/blog" },
   { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];
