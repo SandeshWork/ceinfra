@@ -151,9 +151,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"
               >
                 {/* Image Section */}
                 <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>

@@ -100,13 +100,11 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: (index % 2) * 0.1 }}
-                className={`group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all bg-white border-2 border-transparent hover:border-[#FF6A00] ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all bg-white border-2 border-transparent hover:border-[#FF6A00]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Image Container */}
-                  <div className="relative aspect-video lg:aspect-auto lg:h-96 overflow-hidden bg-gray-100 order-2 lg:order-none">
+                  <div className={`relative aspect-video lg:aspect-auto lg:h-96 overflow-hidden bg-gray-100 order-2 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-none'}`}>
                     <ImageWithFallback
                       src={industry.image}
                       alt={industry.title}
@@ -121,7 +119,7 @@ export default function Industries() {
                   </div>
 
                   {/* Content Container */}
-                  <div className="p-5 sm:p-8 lg:p-12 flex flex-col justify-center bg-white">
+                  <div className={`p-5 sm:p-8 lg:p-12 flex flex-col justify-center bg-white ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1A2639] mb-3 sm:mb-4">
                       {industry.title}
                     </h3>

@@ -294,17 +294,17 @@ export default function About() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                  className={`flex flex-col md:flex-row items-center gap-4 md:gap-8 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <div className={`flex-1 w-full ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-[#FF6A00]">
                       <div className="text-[#FF6A00] font-bold text-2xl mb-2">{milestone.year}</div>
                       <h3 className="text-xl font-bold text-[#1A2639] mb-2">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>
                     </div>
                   </div>
-                  <div className="hidden md:block w-6 h-6 bg-[#FF6A00] rounded-full border-4 border-white shadow-lg relative z-10" />
-                  <div className="flex-1" />
+                  <div className="hidden md:block w-6 h-6 bg-[#FF6A00] rounded-full border-4 border-white shadow-lg relative z-10 flex-shrink-0" />
+                  <div className="hidden md:block flex-1" />
                 </motion.div>
               ))}
             </div>

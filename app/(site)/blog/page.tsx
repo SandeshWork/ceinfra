@@ -29,7 +29,7 @@ export default async function BlogPage() {
       </p>
 
       {posts.length === 0 ? (
-        <p className="text-gray-500">No posts published yet — check back soon.</p>
+        <p className="text-gray-500">No posts published yet, check back soon.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map(({ slug, entry }) => (
