@@ -104,7 +104,7 @@ export default function Careers() {
             </h1>
             <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Join a team that's taking the industry to new
-              heights – safely, efficiently, reliably
+              heights: safely, efficiently, reliably
             </p>
           </motion.div>
         </div>

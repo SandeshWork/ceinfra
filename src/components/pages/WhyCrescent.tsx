@@ -31,7 +31,7 @@ export default function WhyCrescent() {
               Why Choose <span className="text-[#FF6A00]">CE Infrastructure</span>
             </h1>
             <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Safety, reliability, and excellence across India – Your trusted infrastructure partner
+              Safety, reliability, and excellence across India: your trusted infrastructure partner
             </p>
           </motion.div>
         </div>

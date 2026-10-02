@@ -286,20 +286,20 @@ export default function PrivacyPolicy() {
                     <span className="font-semibold text-[#1A2639]">
                       Google Maps
                     </span>{" "}
-                    – used to display our office location.
+                    : used to display our office location.
                   </li>
                   <li>
                     <span className="font-semibold text-[#1A2639]">
                       WhatsApp
                     </span>{" "}
-                    – used to enable click-to-chat support, subject to
+                    : used to enable click-to-chat support, subject to
                     WhatsApp's (Meta's) privacy policy.
                   </li>
                   <li>
                     <span className="font-semibold text-[#1A2639]">
                       LinkedIn, Instagram, and Facebook
                     </span>{" "}
-                    – linked from our Site; any information you share on
+                    : linked from our Site; any information you share on
                     these platforms is governed by their respective privacy
                     policies.
                   </li>

@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Award, Target, Users, TrendingUp, CheckCircle, Shield, Linkedin } from "lucide-react";
+import { Award, Target, Users, TrendingUp, CheckCircle, Shield } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import NextImage from "next/image";
 import lakshMakad from "@/assets/laksh-makad-founder.jpg";
 
 export default function About() {
@@ -58,11 +59,11 @@ export default function About() {
               viewport={{ once: true }}
               className="relative"
             >
-             <div className="relative">
+             <div className="relative aspect-[4/3]">
   <ImageWithFallback
     src="https://images.unsplash.com/photo-1762530358132-94b652b2e514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY3JhbmUlMjBwaWVyJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MjQ3Mzc4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     alt="Industrial construction site"
-    className="rounded-xl shadow-2xl"
+    className="rounded-xl shadow-2xl object-cover"
   />
   <div className="absolute inset-0 bg-white/10 rounded-xl" />
 </div>
@@ -96,10 +97,12 @@ export default function About() {
           >
             {/* Photo */}
             <div className="lg:col-span-2 relative h-72 sm:h-96 lg:h-auto">
-              <img
-                src={lakshMakad.src}
+              <NextImage
+                src={lakshMakad}
                 alt="Laksh Makad, Director of Sales and Finance at CE Infrastructure LLP"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A2639]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-transparent" />
             </div>
@@ -128,11 +131,14 @@ export default function About() {
                   href="https://www.linkedin.com/in/laksh-makad/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-auto w-10 h-10 bg-[#1A2639] hover:bg-[#FF6A00] rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
+                  className="ml-auto flex items-center gap-2 bg-[#0A66C2] hover:bg-[#004182] px-3 py-2 rounded-lg transition-colors flex-shrink-0"
                   title="Laksh Makad on LinkedIn"
                   aria-label="Laksh Makad on LinkedIn"
                 >
-                  <Linkedin size={18} className="text-white" />
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452z" />
+                  </svg>
+                  <span className="text-white text-sm font-semibold">LinkedIn</span>
                 </a>
               </div>
 
@@ -142,7 +148,7 @@ export default function About() {
                 development and financial accountability. His focus
                 is building a system where clients trust the
                 company, teams perform with clarity, and outcomes
-                stay predictable — from expanding into new sectors to
+                stay predictable, from expanding into new sectors to
                 strengthening partnerships and improving financial
                 efficiency.
               </p>
@@ -398,7 +404,7 @@ export default function About() {
           >
             <div className="text-4xl sm:text-6xl mb-4 sm:mb-6 text-[#ffffff]">"</div>
             <p className="text-lg sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-[#ffffff]">
-              At CE Infrastructure LLP, we don't just provide equipment – we elevate possibilities. Every project is an opportunity to demonstrate our commitment to safety, reliability, and excellence.
+              At CE Infrastructure LLP, we don't just provide equipment, we elevate possibilities. Every project is an opportunity to demonstrate our commitment to safety, reliability, and excellence.
             </p>
             <div className="text-[#1A2639]">
               <div className="font-bold text-xl text-[#ffffff]">Leadership Team</div>

@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ceinfrastructure.in"),
   title: {
-    default: "CE Infrastructure LLP — Pan India Equipment Rental & Infrastructure Solutions",
+    default: "CE Infrastructure LLP: Pan India Equipment Rental & Infrastructure Solutions",
     template: "%s | CE Infrastructure LLP",
   },
   description:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "CE Infrastructure LLP",
-    title: "CE Infrastructure LLP — Pan India Equipment Rental & Infrastructure",
+    title: "CE Infrastructure LLP: Pan India Equipment Rental & Infrastructure",
     description:
       "Pan India infrastructure solutions provider offering boom lifts, crawler cranes, scissor lifts, and turnkey project execution. Trusted by L&T, JSW, Adani, Tata.",
   },

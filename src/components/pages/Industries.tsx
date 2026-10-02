@@ -220,13 +220,13 @@ export default function Industries() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative aspect-[4/3]"
             >
               <div className="absolute -inset-1 sm:-inset-4 bg-[#FF6A00] rounded-2xl transform rotate-3" />
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1747026477608-2aaed8ec76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMHBsYW50fGVufDF8fHx8MTc3MjQ0MTIxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Industrial facility"
-                className="relative rounded-xl shadow-2xl"
+                className="relative rounded-xl shadow-2xl object-cover"
               />
             </motion.div>
           </div>

@@ -179,6 +179,8 @@ export default function Home() {
                 src={image.url}
                 alt={image.alt}
                 className="w-full h-full object-cover"
+                sizes="100vw"
+                priority={index === 0}
               />
             </motion.div>
           ))}
