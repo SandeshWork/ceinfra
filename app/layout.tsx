@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingActions from "@/components/layout/FloatingActions";
 import { localBusinessSchema } from "@/lib/schema";
 import "./globals.css";
 
@@ -55,10 +52,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <Navbar />
-        <div className="pt-20">{children}</div>
-        <Footer />
-        <FloatingActions />
+        {children}
       </body>
     </html>
   );
